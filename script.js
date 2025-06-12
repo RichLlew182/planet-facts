@@ -1,4 +1,4 @@
-async function getData() {
+async function getData(index) {
     const url = "./data.json";
     try {
         const response = await fetch(url);
@@ -8,21 +8,11 @@ async function getData() {
 
         const json = await response.json();
 
-        assignData(json)
+        updatePage(json, index)
 
     } catch (error) {
         console.error(error.message);
     }
-}
-
-function assignData(data) {
-
-    console.log(data);
-
-    const earthData = data[2];
-
-    updatePage(earthData)
-
 }
 
 const planetImage = document.querySelector('img.planet');
@@ -40,9 +30,9 @@ const revolutionValue = document.querySelector('.revolution-value');
 const radiusValue = document.querySelector('.radius-value');
 const tempValue = document.querySelector('.temperature-value');
 
-function updatePage(planetData) {
+function updatePage(planetData, index) {
 
-    const { images, name, overview, structure, geology, rotation, revolution, radius, temperature } = planetData;
+    const { images, name, overview, structure, geology, rotation, revolution, radius, temperature } = planetData[index];
 
     console.log(name, overview, structure, geology, rotation, revolution, radius, images, temperature);
 
@@ -63,4 +53,17 @@ function updatePage(planetData) {
 
 }
 
-getData();
+getData(2);
+
+const planetBtns = document.querySelectorAll('.nav-btn')
+
+planetBtns.forEach(function (e) {
+
+    e.addEventListener('click', function (e) {
+
+        console.log(e)
+        const dataId = e.target.dataset.id;
+        getData(dataId);
+    })
+
+})
