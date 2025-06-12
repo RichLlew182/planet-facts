@@ -15,9 +15,9 @@ async function getData(index) {
     }
 }
 
-const planetImage = document.querySelector('img.planet');
-const internalImage = document.querySelector('img.internal');
-const geologyImage = document.querySelector('img.geology');
+const planetImage = document.querySelector('.planet-img');
+const internalImage = document.querySelector('.internal-img');
+const geologyImage = document.querySelector('.geology-img');
 const planetNameEl = document.querySelector('.planet-name');
 const planetOverviewContent = document.querySelector('.overview-content');
 const planetOverviewSource = document.querySelector('.overview-source');
@@ -53,17 +53,38 @@ function updatePage(planetData, index) {
 
 }
 
-getData(2);
-
 const planetBtns = document.querySelectorAll('.nav-btn')
 
-planetBtns.forEach(function (e) {
+planetBtns.forEach(function (el) {
 
-    e.addEventListener('click', function (e) {
+    el.addEventListener('click', function (event) {
 
-        console.log(e)
-        const dataId = e.target.dataset.id;
+        const dataId = event.target.dataset.id;
         getData(dataId);
     })
 
 })
+
+const navBtns = document.querySelectorAll('.secondary-nav-btn');
+
+const content = document.querySelectorAll('.content')
+
+navBtns.forEach(function (el) {
+
+    el.addEventListener('click', function (event) {
+        const dataId = event.target.dataset.id;
+
+        const visibleEl = document.querySelector(`.${dataId}`);
+        console.log(visibleEl);
+
+        if (visibleEl.style.display = 'none') {
+            visibleEl.style.display = 'block';
+        }
+
+    })
+
+})
+
+
+
+getData(0);
