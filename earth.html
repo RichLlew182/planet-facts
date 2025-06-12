@@ -16,19 +16,16 @@
   <img src="" alt="" class="internal">
   <img src="" alt="" class="geology">
 
-  <div class="planet-name">Earth</div>
+  <h2 class="planet-name"></h2>
 
   <!-- Overview Content Start -->
 
   <div class="overview">
-    <div class="overview-content">
-      Third planet from the Sun and the only known planet to harbor life.
-      About 29.2% of Earth's surface is land with remaining 70.8% is
-      covered with water. Earth's distance from the Sun, physical properties
-      and geological history have allowed life to evolve and thrive.
-    </div>
+    <p class="overview-content">
+    </p>
 
-    <div class="overview-source"> Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Earth --></div>
+    <a href="" target="_blank" rel="noopen noreferrer" class="overview-source"> Source : Wikipedia
+      <!-- URL: https://en.wikipedia.org/wiki/Earth --></a>
   </div>
 
   <!-- Overview Content End -->
@@ -36,14 +33,10 @@
   <!-- Internal Structure Content Start -->
 
   <div class="structure">
-    <div class="structure-content">
-      Earth's interior, like that of the other terrestrial planets, is divided
-      into layers by their chemical or physical (rheological) properties. The
-      outer layer is a chemically distinct silicate solid crust, which is
-      underlain by a highly viscous solid mantle.
-    </div>
+    <p class="structure-content">
+    </p>
 
-    <div class="structure-source">Source : Wikipedia</div>
+    <a href="" class="structure-source" target="_blank" rel="noopen noreferrer">Source : Wikipedia</a>
     <!-- URL: https://en.wikipedia.org/wiki/Earth#Internal_structure -->
   </div>
 
@@ -52,43 +45,47 @@
   <!-- Surface Geology Content Start -->
 
   <div class="geology">
-    <div class="geology-content">
-      The total surface area of Earth is about 510 million km2. The continental
-      crust consists of lower density material such as the igneous rocks granite
-      and andesite. Less common is basalt, a denser volcanic rock that is the
-      primary constituent of the ocean floors.
-    </div>
+    <p class="geology-content">
+    </p>
 
-    <div class="geology-source">Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Earth#Surface --></div>
+    <a href="" target="_blank" rel="noopen noreferrer" class="geology-source">Source : Wikipedia
+      <!-- URL: https://en.wikipedia.org/wiki/Earth#Surface --></a>
 
   </div>
 
 
   <!-- Surface Geology Content End -->
 
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
+  <nav class="nav">
+    <ul>
+      <li> 01 Overview</li>
+      <li> 02 Internal Structure</li>
+      <li> 03 Surface Geology</li>
+    </ul>
+  </nav>
 
   <div class="rotation">
     Rotation Time
-    0.99 Days
+    <span class="rotation-value"></span>
   </div>
 
   <div class="revolution">
     Revolution Time
-    365.26 Days
+    <span class="revolution-value"></span>
   </div>
 
   <div class="radius">
     Radius
-    6,371 KM
+    <span class="radius-value"></span>
   </div>
 
-  <div class="temperatures">
+  <div class="temperature">
     Average Temp.
-    16°c
+    <span class="temperature-value"></span>
   </div>
+
+  <script src="./script.js"></script>
+
 </body>
 
 </html>
