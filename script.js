@@ -63,28 +63,7 @@ planetBtns.forEach(function (el) {
         getData(dataId);
     })
 
-})
-
-const navBtns = document.querySelectorAll('.secondary-nav-btn');
-
-const content = document.querySelectorAll('.content')
-
-navBtns.forEach(function (el) {
-
-    el.addEventListener('click', function (event) {
-        const dataId = event.target.dataset.id;
-
-        const visibleEl = document.querySelector(`.${dataId}`);
-        console.log(visibleEl);
-
-        if (visibleEl.style.display = 'none') {
-            visibleEl.style.display = 'block';
-        }
-
-    })
-
-})
-
+});
 
 
 getData(0);
