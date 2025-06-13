@@ -5,15 +5,18 @@
     --midSlate: #38384F;
     --lightGrey: #838391;
 
-    --lightBlue: #419EBB;
-    --yellow: #EDA249;
-    --purple: #6f2ed6;
-    --bloodOrange: #D14C32;
+    --mercuryBlue: #419EBB;
+    --venusYellow: #EDA249;
+    --earthPurple: #6f2ed6;
+    --marsOrange: #D14C32;
 
-    --red: #D83A34;
-    --orange: #CD5120;
-    --turquoise: #1ec2a4;
-    --blue: #2d68f0;
+    --jupiterRed: #D83A34;
+    --saturnOrange: #CD5120;
+    --uranusGreen: #1ec2a4;
+    --neptuneBlue: #2d68f0;
+
+    --bs-link-color: white;
+    --bs-link-hover-color: white;
 
 }
 
@@ -29,11 +32,9 @@ body {
 }
 
 h1,
+.h1,
 h2,
-h3,
-h4,
-h5,
-h6,
+.h2,
 .font-heading {
     font-family: "Antonio", sans-serif;
     font-optical-sizing: auto;
@@ -42,31 +43,47 @@ h6,
 
 }
 
-h1 {
+h3,
+.h3,
+h4,
+.h4 {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+h1,
+.h2 {
     font-size: 80px;
     line-height: 103px;
     font-weight: 500;
 }
 
-h2 {
+h2,
+.h2 {
     font-size: 40px;
     line-height: 52px;
     font-weight: 500;
     letter-spacing: -1.5px;
 }
 
-h3 {
+h3,
+.h3 {
     font-size: 12px;
     line-height: 25px;
-    font-weight: bold;
     letter-spacing: 2.6px;
 }
 
-h4 {
+h4,
+.h4 {
     font-size: 11px;
     line-height: 25px;
-    font-weight: bold;
     letter-spacing: 1px;
+}
+
+main {
+    min-height: 100vh;
 }
 
 .container-sm {
@@ -88,4 +105,40 @@ h4 {
 
 .geology-img {
     bottom: 20px;
+}
+
+.navbar-brand {
+    font-size: 28px;
+}
+
+.mercury .nav-pills {
+    --bs-nav-pills-link-active-bg: var(--mercuryBlue);
+}
+
+.venus .nav-pills {
+    --bs-nav-pills-link-active-bg: var(--venusYellow);
+}
+
+.earth .nav-pills {
+    --bs-nav-pills-link-active-bg: var(--earthPurple);
+}
+
+.mars .nav-pills {
+    --bs-nav-pills-link-active-bg: var(--marsOrange);
+}
+
+.jupiter .nav-pills {
+    --bs-nav-pills-link-active-bg: var(--jupiterRed);
+}
+
+.saturn .nav-pills {
+    --bs-nav-pills-link-active-bg: var(--saturnOrange);
+}
+
+.uranus .nav-pills {
+    --bs-nav-pills-link-active-bg: var(--uranusGreen);
+}
+
+.neptune .nav-pills {
+    --bs-nav-pills-link-active-bg: var(--neptuneBlue);
 }

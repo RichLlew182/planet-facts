@@ -21,33 +21,50 @@
 <body>
 
   <header>
+
     <nav class="navbar navbar-dark navbar-expand-lg">
-      <div class="container-fluid justify-content-space-between">
-        <a class="navbar-brand font-heading" href="#">The Planets</a>
-        <ul class="navbar-nav ">
-          <li class="nav-item"><button type="button" class="nav-btn nav-link active" data-id="0"
-              id="mercuryBtn">Mercury</button></li>
-          <li class="nav-item"><button type="button" class="nav-btn nav-link" data-id="1" id="venusBtn">Venus</button>
-          </li>
-          <li class="nav-item"><button type="button" class="nav-btn nav-link" data-id="2" id="earth">Earth</button></li>
-          <li class="nav-item"><button type="button" class="nav-btn nav-link" data-id="3" id="marsBtn">Mars</button>
-          </li>
-          <li class="nav-item"><button type="button" class="nav-btn nav-link" data-id="4"
-              id="jupiterBtn">Jupiter</button>
-          </li>
-          <li class="nav-item"><button type="button" class="nav-btn nav-link" data-id="5" id="saturnBtn">Saturn</button>
-          </li>
-          <li class="nav-item"><button type="button" class="nav-btn nav-link" data-id="6" id="uranusBtn">Uranus</button>
-          </li>
-          <li class="nav-item"><button type="button" class="nav-btn nav-link" data-id="7"
-              id="neptuneBtn">Neptune</button>
-          </li>
+      <a class="navbar-brand" href="#">Offcanvas navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
+        aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="navbarOffcanvasLg"
+        aria-labelledby="navbarOffcanvasLgLabel">
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item"><a type="button" role="button" class="nav-btn nav-link h4 active" data-id="0"
+                id="mercuryBtn">Mercury</a></li>
+            <li class="nav-item"><a type="button" role="button" class="nav-btn nav-link h4" data-id="1"
+                id="venusBtn">Venus</a>
+            </li>
+            <li class="nav-item"><a type="button" role="button" class="nav-btn nav-link h4" data-id="2"
+                id="earth">Earth</a>
+            </li>
+            <li class="nav-item"><a type="button" role="button" class="nav-btn nav-link h4" data-id="3"
+                id="marsBtn">Mars</a>
+            </li>
+            <li class="nav-item"><a type="button" role="button" class="nav-btn nav-link h4" data-id="4"
+                id="jupiterBtn">Jupiter</a>
+            </li>
+            <li class="nav-item"><a type="button" role="button" class="nav-btn nav-link h4" data-id="5"
+                id="saturnBtn">Saturn</a>
+            </li>
+            <li class="nav-item"><a type="button" role="button" class="nav-btn nav-link h4" data-id="6"
+                id="uranusBtn">Uranus</a>
+            </li>
+            <li class="nav-item"><a type="button" role="button" class="nav-btn nav-link h4" data-id="7"
+                id="neptuneBtn">Neptune</a>
+            </li>
+          </ul>
+        </div>
+        </li>
         </ul>
       </div>
     </nav>
+
   </header>
 
-  <main>
+  <main class="d-flex flex-column justify-content-center">
     <section class="container-sm">
       <div class="row">
         <div class="col-12 col-lg-8">
@@ -130,28 +147,28 @@
 
       <div class="row">
         <div class="col">
-          <div class="rotation">
+          <div class="additional-information text-center rotation">
             Rotation Time
             <div class="rotation-value font-heading"></div>
           </div>
         </div>
 
         <div class="col">
-          <div class="revolution">
+          <div class="additional-information text-center revolution">
             Revolution Time
             <div class="revolution-value font-heading"></div>
           </div>
         </div>
 
         <div class="col">
-          <div class="radius">
+          <div class="additional-information text-center radius">
             Radius
             <div class="radius-value font-heading"></div>
           </div>
         </div>
 
         <div class="col">
-          <div class="temperature">
+          <div class="additional-information text-center temperature">
             Average Temp.
             <div class="temperature-value font-heading"></div>
           </div>

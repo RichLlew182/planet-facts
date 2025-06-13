@@ -32,7 +32,11 @@ const tempValue = document.querySelector('.temperature-value');
 
 function updatePage(planetData, index) {
 
+
+
     const { images, name, overview, structure, geology, rotation, revolution, radius, temperature } = planetData[index];
+
+    document.body.classList = name.toLowerCase();
 
     overviewImage.src = images.planet;
     structureImage.src = images.internal;
