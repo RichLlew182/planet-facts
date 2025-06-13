@@ -1,7 +1,91 @@
+:root {
+
+    --white: #FFFFFF;
+    --darkSlate: #070724;
+    --midSlate: #38384F;
+    --lightGrey: #838391;
+
+    --lightBlue: #419EBB;
+    --yellow: #EDA249;
+    --purple: #6f2ed6;
+    --bloodOrange: #D14C32;
+
+    --red: #D83A34;
+    --orange: #CD5120;
+    --turquoise: #1ec2a4;
+    --blue: #2d68f0;
+
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.25;
+    background: url(./assets/background-stars.svg) center center / cover no-repeat var(--darkSlate);
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
+    font-family: "Antonio", sans-serif;
+    font-optical-sizing: auto;
+    text-transform: uppercase;
+    font-style: normal;
+
+}
+
+h1 {
+    font-size: 80px;
+    line-height: 103px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+}
+
+h3 {
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: bold;
+    letter-spacing: 2.6px;
+}
+
+h4 {
+    font-size: 11px;
+    line-height: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.container-sm {
+    max-width: 1110px;
+}
+
 .planet-images {
     display: none;
 }
 
 .overview-img {
     display: block;
+}
+
+.image-wrapper {
+    height: 582px;
+    width: 582px;
+}
+
+.geology-img {
+    bottom: 20px;
 }

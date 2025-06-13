@@ -34,8 +34,6 @@ function updatePage(planetData, index) {
 
     const { images, name, overview, structure, geology, rotation, revolution, radius, temperature } = planetData[index];
 
-    console.log(name, overview, structure, geology, rotation, revolution, radius, images, temperature);
-
     overviewImage.src = images.planet;
     structureImage.src = images.internal;
     geologyImage.src = images.geology;
@@ -86,16 +84,14 @@ secondaryNavBtns.forEach(function (el) {
             geologyImage.style.display = 'none'
 
         } if (geologyTab.classList.contains('active')) {
-            structureImage.style.display = 'block';
+            structureImage.style.display = 'none';
             geologyImage.style.display = 'block';
-            overviewImage.style.display = 'none';
+            overviewImage.style.display = 'block';
         }
 
     })
 
 })
-
-
 
 
 getData(0);
