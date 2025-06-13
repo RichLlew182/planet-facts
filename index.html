@@ -23,7 +23,7 @@
   <header>
 
     <nav class="navbar navbar-dark navbar-expand-sm border-bottom p-3">
-      <div class="container-fluid">
+      <div class="container-fluid flex-row flex-md-column flex-xl-row">
         <a class="navbar-brand font-heading" href="#">Planet Facts</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
           aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
@@ -31,6 +31,10 @@
         </button>
         <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="navbarOffcanvasLg"
           aria-labelledby="navbarOffcanvasLgLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 gap-3">
               <li class="nav-item"><a type="button" role="button" class="planet-nav-btn nav-link h4 active" data-id="0"
@@ -66,9 +70,9 @@
 
   </header>
 
-  <main class="d-flex flex-column justify-content-center row-gap-5">
+  <main class="d-flex flex-column justify-content-center row-gap-5 py-5 px-3">
     <section class="container-sm">
-      <div class="row">
+      <div class="row row-gap-5">
         <div class="col-12 col-lg-8">
           <div class="image-wrapper d-flex justify-content-center align-items-center position-relative">
             <img src="" alt="" class="planet-images overview-img">
@@ -78,71 +82,76 @@
 
         </div>
         <div class="col-12 col-lg-4">
-          <article class="planet-information d-flex flex-column row-gap-5">
+          <article class="planet-information d-flex flex-column flex-md-row row flex-lg-column g-5">
 
 
-            <div class="tab-content" id="myTabContent">
-              <h1 class="planet-name"></h1>
-              <div class="tab-pane fade show active" id="overview-tab-pane" role="tabpanel"
-                aria-labelledby="overview-tab" tabindex="0">
-                <div class="content overview">
-                  <p class="overview-content">
-                  </p>
+            <div class="col-12 col-md-6 col-lg-12">
+              <div class="tab-content" id="myTabContent">
+                <h1 class="planet-name"></h1>
+                <div class="tab-pane fade show active" id="overview-tab-pane" role="tabpanel"
+                  aria-labelledby="overview-tab" tabindex="0">
+                  <div class="content overview">
+                    <p class="overview-content">
+                    </p>
 
-                  <span class="wiki-link"> Source :
-                    <a href="" target="_blank" rel="noopen noreferrer" class="overview-source">Wikipedia
-                      <!-- URL: https://en.wikipedia.org/wiki/Earth --></a>
-                  </span>
+                    <span class="wiki-link"> Source :
+                      <a href="" target="_blank" rel="noopen noreferrer" class="overview-source">Wikipedia
+                        <!-- URL: https://en.wikipedia.org/wiki/Earth --></a>
+                    </span>
+                  </div>
                 </div>
-              </div>
 
-              <div class="tab-pane fade" id="structure-tab-pane" role="tabpanel" aria-labelledby="structure-tab"
-                tabindex="0">
-                <div class="structure">
-                  <p class="structure-content">
-                  </p>
+                <div class="tab-pane fade" id="structure-tab-pane" role="tabpanel" aria-labelledby="structure-tab"
+                  tabindex="0">
+                  <div class="structure">
+                    <p class="structure-content">
+                    </p>
 
-                  <span class="wiki-link">Source :<a href="" class="structure-source" target="_blank"
-                      rel="noopen noreferrer">Wikipedia</a></span>
-                  <!-- URL: https://en.wikipedia.org/wiki/Earth#Internal_structure -->
+                    <span class="wiki-link">Source :<a href="" class="structure-source" target="_blank"
+                        rel="noopen noreferrer">Wikipedia</a></span>
+                    <!-- URL: https://en.wikipedia.org/wiki/Earth#Internal_structure -->
+                  </div>
                 </div>
-              </div>
 
-              <div class="tab-pane fade" id="geology-tab-pane" role="tabpanel" aria-labelledby="geology-tab"
-                tabindex="0">
-                <div class="geology">
-                  <p class="geology-content">
-                  </p>
+                <div class="tab-pane fade" id="geology-tab-pane" role="tabpanel" aria-labelledby="geology-tab"
+                  tabindex="0">
+                  <div class="geology">
+                    <p class="geology-content">
+                    </p>
 
-                  <span class="wiki-link">Source :
-                    <a href="" target="_blank" rel="noopen noreferrer" class="geology-source">Wikipedia
-                      <!-- URL: https://en.wikipedia.org/wiki/Earth#Surface --></a>
-                  </span>
+                    <span class="wiki-link">Source :
+                      <a href="" target="_blank" rel="noopen noreferrer" class="geology-source">Wikipedia
+                        <!-- URL: https://en.wikipedia.org/wiki/Earth#Surface --></a>
+                    </span>
 
+                  </div>
                 </div>
-              </div>
 
+              </div>
             </div>
 
-            <ul class="nav nav-pills d-flex flex-column row-gap-3" id="myTab" role="tablist">
-              <li class="nav-item w-100" role="presentation">
-                <button class="secondary-nav-btns nav-link w-100 h3 border active" id="overview-tab"
-                  data-bs-toggle="tab" data-bs-target="#overview-tab-pane" type="button" role="tab"
-                  aria-selected="true"><span class="opacity-50">01</span> Overview</button>
-              </li>
-              <li class="nav-item w-100" role="presentation">
-                <button class="secondary-nav-btns nav-link w-100 h3 border " id="structure-tab" data-bs-toggle="tab"
-                  data-bs-target="#structure-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
-                  aria-selected="false"><span class="opacity-50">02</span> Internal
-                  Structure</button>
-              </li>
-              <li class="nav-item w-100" role="presentation">
-                <button class="secondary-nav-btns nav-link w-100 h3 border " id="geology-tab" data-bs-toggle="tab"
-                  data-bs-target="#geology-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
-                  aria-selected="false"><span class="opacity-50">03</span> Surface
-                  Geology</button>
-              </li>
-            </ul>
+            <div class="col-12 col-md-6 col-lg-12">
+              <ul class="nav nav-pills d-flex flex-column row-gap-3" id="myTab" role="tablist">
+                <li class="nav-item w-100" role="presentation">
+                  <button class="secondary-nav-btns nav-link w-100 h3 border active" id="overview-tab"
+                    data-bs-toggle="tab" data-bs-target="#overview-tab-pane" type="button" role="tab"
+                    aria-selected="true"><span
+                      class="opacity-50 d-none d-md-inline-block me-md-3">01</span>Overview</button>
+                </li>
+                <li class="nav-item w-100" role="presentation">
+                  <button class="secondary-nav-btns nav-link w-100 h3 border " id="structure-tab" data-bs-toggle="tab"
+                    data-bs-target="#structure-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                    aria-selected="false"><span class="opacity-50 d-none d-md-inline-block me-md-3">02</span>Internal
+                    Structure</button>
+                </li>
+                <li class="nav-item w-100" role="presentation">
+                  <button class="secondary-nav-btns nav-link w-100 h3 border " id="geology-tab" data-bs-toggle="tab"
+                    data-bs-target="#geology-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
+                    aria-selected="false"><span class="opacity-50 d-none d-md-inline-block me-md-3">03</span>Surface
+                    Geology</button>
+                </li>
+              </ul>
+            </div>
           </article>
 
 
@@ -154,30 +163,34 @@
 
     <section class="container-sm">
 
-      <div class="row">
-        <div class="col">
-          <div class="additional-information p-3 border rotation">
+      <div class="row row-gap-3">
+        <div class="col-12 col-md-3">
+          <div
+            class="additional-information p-3 border d-flex justify-content-between align-items-center flex-md-column align-items-md-start rotation">
             <h4 class="opacity-50 mb-0"> Rotation Time</h4>
             <div class="rotation-value h2"></div>
           </div>
         </div>
 
-        <div class="col">
-          <div class="additional-information p-3 border revolution">
+        <div class="col-12 col-md-3">
+          <div
+            class="additional-information p-3 border d-flex justify-content-between align-items-center flex-md-column align-items-md-start revolution">
             <h4 class="opacity-50 mb-0"> Revolution Time</h4>
             <div class="revolution-value h2"></div>
           </div>
         </div>
 
-        <div class="col">
-          <div class="additional-information p-3 border radius">
+        <div class="col-12 col-md-3">
+          <div
+            class="additional-information p-3 border d-flex justify-content-between align-items-center flex-md-column align-items-md-start radius">
             <h4 class="opacity-50 mb-0"> Radius</h4>
             <div class="radius-value h2"></div>
           </div>
         </div>
 
-        <div class="col">
-          <div class="additional-information p-3 border temperature">
+        <div class="col-12 col-md-3">
+          <div
+            class="additional-information p-3 border d-flex justify-content-between align-items-center flex-md-column align-items-md-start temperature">
             <h4 class="opacity-50 mb-0">Average Temp</h4>
             <div class="temperature-value h2"></div>
           </div>
