@@ -1,7 +1,7 @@
 :root {
 
-    --white: #FFFFFF;
-    --darkSlate: #070724;
+    --white: 255, 255, 255;
+    --darkSlate: 7, 7, 36;
     --midSlate: #38384F;
     --lightGrey: #838391;
 
@@ -17,6 +17,9 @@
 
     --bs-link-color: white;
     --bs-link-hover-color: white;
+    --bs-border-radius: 0;
+    --bs-border-color: rgba(255, 255, 255, 0.2);
+    --bs-dark-rgb: var(--darkSlate);
 
 }
 
@@ -27,7 +30,7 @@ body {
     font-style: normal;
     font-size: 14px;
     line-height: 1.25;
-    background: url(./assets/background-stars.svg) center center / cover no-repeat var(--darkSlate);
+    background: url(./assets/background-stars.svg) center center / cover no-repeat rgb(var(--darkSlate));
     color: white;
 }
 
@@ -51,6 +54,7 @@ h4,
     font-optical-sizing: auto;
     text-transform: uppercase;
     font-style: normal;
+    margin-bottom: 0;
 }
 
 h1,
@@ -103,6 +107,10 @@ main {
     width: 582px;
 }
 
+.image-wrapper img {
+    max-width: 100%;
+}
+
 .geology-img {
     bottom: 20px;
 }
@@ -141,4 +149,21 @@ main {
 
 .neptune .nav-pills {
     --bs-nav-pills-link-active-bg: var(--neptuneBlue);
+}
+
+.nav-pills .nav-link:hover {
+    background: #313148;
+    border-color: #313148 !important;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:active,
+.nav-pills .show>.nav-link {
+    border-color: var(--bs-nav-pills-link-active-bg) !important;
+    background-color: var(--bs-nav-pills-link-active-bg) !important;
+}
+
+.wiki-link,
+.wiki-link a {
+    color: var(--lightGrey);
 }
