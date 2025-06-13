@@ -55,16 +55,19 @@ function updatePage(planetData, index) {
 
 }
 
-const planetBtns = document.querySelectorAll('.nav-btn')
+const planetNavBtns = document.querySelectorAll('.planet-nav-btn')
 
-planetBtns.forEach(function (el) {
-
+planetNavBtns.forEach(function (el) {
     el.addEventListener('click', function (event) {
 
-        const dataId = event.target.dataset.id;
-        getData(dataId);
-    })
+        const planetNavBtn = event.currentTarget;
+        const dataId = planetNavBtn.dataset.id;
 
+        planetNavBtns.forEach(btn => btn.classList.remove('active'));
+        planetNavBtn.classList.add('active');
+
+        getData(dataId);
+    });
 });
 
 const overviewTab = document.querySelector('#overview-tab');
@@ -96,6 +99,5 @@ secondaryNavBtns.forEach(function (el) {
     })
 
 })
-
 
 getData(0);
