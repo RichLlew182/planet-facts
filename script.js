@@ -15,8 +15,8 @@ async function getData(index) {
     }
 }
 
-const planetImage = document.querySelector('.planet-img');
-const internalImage = document.querySelector('.internal-img');
+const overviewImage = document.querySelector('.overview-img');
+const structureImage = document.querySelector('.structure-img');
 const geologyImage = document.querySelector('.geology-img');
 const planetNameEl = document.querySelector('.planet-name');
 const planetOverviewContent = document.querySelector('.overview-content');
@@ -36,8 +36,8 @@ function updatePage(planetData, index) {
 
     console.log(name, overview, structure, geology, rotation, revolution, radius, images, temperature);
 
-    planetImage.src = images.planet;
-    internalImage.src = images.internal;
+    overviewImage.src = images.planet;
+    structureImage.src = images.internal;
     geologyImage.src = images.geology;
     planetNameEl.innerText = name;
     planetOverviewContent.innerText = overview.content;
@@ -64,6 +64,38 @@ planetBtns.forEach(function (el) {
     })
 
 });
+
+const overviewTab = document.querySelector('#overview-tab');
+const structureTab = document.querySelector('#structure-tab');
+const geologyTab = document.querySelector('#geology-tab');
+const secondaryNavBtns = document.querySelectorAll('.secondary-nav-btns');
+
+secondaryNavBtns.forEach(function (el) {
+
+    el.addEventListener('click', function () {
+        if (overviewTab.classList.contains('active')) {
+
+            overviewImage.style.display = 'block';
+            structureImage.style.display = 'none'
+            geologyImage.style.display = 'none'
+
+        } if (structureTab.classList.contains('active')) {
+
+            structureImage.style.display = 'block';
+            overviewImage.style.display = 'none';
+            geologyImage.style.display = 'none'
+
+        } if (geologyTab.classList.contains('active')) {
+            structureImage.style.display = 'block';
+            geologyImage.style.display = 'block';
+            overviewImage.style.display = 'none';
+        }
+
+    })
+
+})
+
+
 
 
 getData(0);
