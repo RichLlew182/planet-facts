@@ -100,4 +100,4 @@ secondaryNavBtns.forEach(function (el) {
 
 })
 
-getData(0);
+getData(2);
