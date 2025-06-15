@@ -103,10 +103,6 @@ main::before {
     right: 0;
 }
 
-.container-sm {
-    max-width: 1110px;
-}
-
 .planet-images {
     display: none;
 }
@@ -387,6 +383,10 @@ li.nav-item {
     h4,
     .h4 {
         line-height: 25px;
+    }
+
+    .container-sm {
+        max-width: 1110px;
     }
 
     .geology-img {
