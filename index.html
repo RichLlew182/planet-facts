@@ -23,7 +23,7 @@
   <header>
 
     <nav class="navbar navbar-dark navbar-expand-md border-bottom px-3 py-0">
-      <div class="container-fluid flex-row flex-md-column flex-xl-row py-3">
+      <div class="container-fluid flex-row flex-md-column flex-xl-row row-gap-3 py-3">
         <a class="navbar-brand font-heading me-0" href="./">The Planets</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
           aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
@@ -38,35 +38,35 @@
           <div class="offcanvas-body p-4 p-md-0">
             <ul class="navbar-nav justify-content-end flex-grow-1 gap-md-4">
               <li class="nav-item"><a type="button" role="button" data-bs-dismiss="offcanvas"
-                  class="planet-nav-btn mercury nav-link" data-id="0" id="mercuryBtn"><span
-                    class="circle-indicator d-sm-none"></span> Mercury</a></li>
+                  class="planet-nav-btn nav-link" data-id="0" id="mercuryBtn"><span
+                    class="circle-indicator mercury d-sm-none"></span> Mercury</a></li>
               <li class="nav-item"><a type="button" role="button" data-bs-dismiss="offcanvas"
-                  class="planet-nav-btn venus nav-link" data-id="1" id="venusBtn"><span
-                    class="circle-indicator d-sm-none"></span>Venus</a>
+                  class="planet-nav-btn nav-link" data-id="1" id="venusBtn"><span
+                    class="circle-indicator venus d-sm-none"></span>Venus</a>
               </li>
               <li class="nav-item"><a type="button" role="button" data-bs-dismiss="offcanvas"
-                  class="planet-nav-btn earth nav-link active" data-id="2" id="earth"><span
-                    class="circle-indicator d-sm-none"></span>Earth</a>
+                  class="planet-nav-btn nav-link active" data-id="2" id="earth"><span
+                    class="circle-indicator earth d-sm-none"></span>Earth</a>
               </li>
               <li class="nav-item"><a type="button" role="button" data-bs-dismiss="offcanvas"
-                  class="planet-nav-btn mars nav-link" data-id="3" id="marsBtn"><span
-                    class="circle-indicator d-sm-none"></span>Mars</a>
+                  class="planet-nav-btn nav-link" data-id="3" id="marsBtn"><span
+                    class="circle-indicator mars d-sm-none"></span>Mars</a>
               </li>
               <li class="nav-item"><a type="button" role="button" data-bs-dismiss="offcanvas"
-                  class="planet-nav-btn jupiter nav-link" data-id="4" id="jupiterBtn"><span
-                    class="circle-indicator d-sm-none"></span>Jupiter</a>
+                  class="planet-nav-btn nav-link" data-id="4" id="jupiterBtn"><span
+                    class="circle-indicator jupiter d-sm-none"></span>Jupiter</a>
               </li>
               <li class="nav-item"><a type="button" role="button" data-bs-dismiss="offcanvas"
-                  class="planet-nav-btn saturn nav-link" data-id="5" id="saturnBtn"><span
-                    class="circle-indicator d-sm-none"></span>Saturn</a>
+                  class="planet-nav-btn nav-link" data-id="5" id="saturnBtn"><span
+                    class="circle-indicator saturn d-sm-none"></span>Saturn</a>
               </li>
               <li class="nav-item"><a type="button" role="button" data-bs-dismiss="offcanvas"
-                  class="planet-nav-btn uranus nav-link" data-id="6" id="uranusBtn"><span
-                    class="circle-indicator d-sm-none"></span>Uranus</a>
+                  class="planet-nav-btn nav-link" data-id="6" id="uranusBtn"><span
+                    class="circle-indicator uranus d-sm-none"></span>Uranus</a>
               </li>
               <li class="nav-item"><a type="button" role="button" data-bs-dismiss="offcanvas"
-                  class="planet-nav-btn neptune nav-link" data-id="7" id="neptuneBtn"><span
-                    class="circle-indicator d-sm-none"></span>Neptune</a>
+                  class="planet-nav-btn nav-link" data-id="7" id="neptuneBtn"><span
+                    class="circle-indicator neptune d-sm-none"></span>Neptune</a>
               </li>
             </ul>
           </div>
@@ -79,7 +79,7 @@
   </header>
 
   <main class="d-flex flex-column justify-content-center row-gap-3 row-gap-md-5 py-5 px-3">
-    <section class="container-sm">
+    <section class="container-sm position-relative">
       <div class="row row-gap-3 row-gap-md-5">
         <div class="col-12 col-lg-7 col-xl-8">
           <div class="image-wrapper d-flex justify-content-center align-items-center position-relative">
@@ -91,11 +91,11 @@
         </div>
         <div class="col-12 col-lg-5 col-xl-4">
           <article
-            class="planet-information d-flex flex-column flex-md-row align-items-end justify-content-center row flex-lg-column g-5">
+            class="planet-information d-flex flex-column flex-md-row align-items-end justify-content-center row flex-lg-column h-auto g-5">
 
 
             <div class="col-12 col-md-6 col-lg-12">
-              <div class="tab-content" id="myTabContent">
+              <div class="tab-content mt-3 mt-md-0" id="myTabContent">
                 <h1 class="planet-name mb-4"></h1>
                 <div class="tab-pane fade show active" id="overview-tab-pane" role="tabpanel"
                   aria-labelledby="overview-tab" tabindex="0">
@@ -140,7 +140,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-12 mt-0 mt-md-5">
-              <ul class="nav nav-pills d-flex flex-md-column row-gap-3" id="planetInformationTab" role="tablist">
+              <ul class="nav nav-pills d-flex flex-md-column row-gap-3 w-100" id="planetInformationTab" role="tablist">
                 <li class="nav-item flex-grow-1" role="presentation">
                   <button class="secondary-nav-btns nav-link w-100 h3 active" id="overview-tab" data-bs-toggle="tab"
                     data-bs-target="#overview-tab-pane" type="button" role="tab" aria-selected="true"><span
@@ -150,14 +150,14 @@
                   <button class="secondary-nav-btns nav-link w-100 h3" id="structure-tab" data-bs-toggle="tab"
                     data-bs-target="#structure-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
                     aria-selected="false"><span class="opacity-50 d-none d-md-inline-block me-md-3">02</span><span
-                      class="d-none d-sm-inline">Internal</span>
+                      class="d-none d-md-inline">Internal</span>
                     Structure</button>
                 </li>
                 <li class="nav-item flex-grow-1" role="presentation">
                   <button class="secondary-nav-btns nav-link w-100 h3" id="geology-tab" data-bs-toggle="tab"
                     data-bs-target="#geology-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
                     aria-selected="false"><span class="opacity-50 d-none d-md-inline-block me-md-3">03</span>Surface
-                    <span class="d-none d-sm-inline">Geology</span></button>
+                    <span class="d-none d-md-inline">Geology</span></button>
                 </li>
               </ul>
             </div>
