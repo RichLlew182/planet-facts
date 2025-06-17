@@ -97,7 +97,7 @@ main::before {
     width: 100%;
     height: 1px;
     position: absolute;
-    top: 130px;
+    top: 126px;
     background: var(--bs-border-color);
     left: 0;
     right: 0;
@@ -122,7 +122,9 @@ main::before {
 }
 
 .geology-img {
-    bottom: 0px;
+    bottom: -15px;
+    height: 110px;
+    width: auto;
 }
 
 .nav {
@@ -149,9 +151,10 @@ main::before {
         --bs-nav-pills-link-active-bg: var(--mercuryBlue);
     }
 
-    .circle-indicator {
-        background-color: #DEF4FC;
-    }
+}
+
+.circle-indicator.mercury {
+    background-color: #DEF4FC;
 }
 
 .venus {
@@ -160,10 +163,10 @@ main::before {
     .nav-pills {
         --bs-nav-pills-link-active-bg: var(--venusYellow);
     }
+}
 
-    .circle-indicator {
-        background-color: #F7CC7F;
-    }
+.circle-indicator.venus {
+    background-color: #F7CC7F;
 }
 
 .earth {
@@ -173,9 +176,10 @@ main::before {
         --bs-nav-pills-link-active-bg: var(--earthPurple);
     }
 
-    .circle-indicator {
-        background-color: #545BFE;
-    }
+}
+
+.circle-indicator.earth {
+    background-color: #545BFE;
 }
 
 .mars {
@@ -185,10 +189,10 @@ main::before {
         --bs-nav-pills-link-active-bg: var(--marsOrange);
     }
 
-    .circle-indicator {
-        background-color: #FF6A45;
-    }
+}
 
+.circle-indicator.mars {
+    background-color: #FF6A45;
 }
 
 .jupiter {
@@ -198,9 +202,10 @@ main::before {
         --bs-nav-pills-link-active-bg: var(--jupiterRed);
     }
 
-    .circle-indicator {
-        background-color: #ECAD7A;
-    }
+}
+
+.circle-indicator.jupiter {
+    background-color: #ECAD7A;
 }
 
 .saturn {
@@ -210,11 +215,11 @@ main::before {
         --bs-nav-pills-link-active-bg: var(--saturnOrange);
     }
 
-    .circle-indicator {
-        background-color: #FCCB6B;
-    }
 }
 
+.circle-indicator.saturn {
+    background-color: #FCCB6B;
+}
 
 .uranus {
     --primaryBg: var(--uranusGreen);
@@ -223,9 +228,10 @@ main::before {
         --bs-nav-pills-link-active-bg: var(--uranusGreen);
     }
 
-    .circle-indicator {
-        background-color: #65F0D5;
-    }
+}
+
+.circle-indicator.uranus {
+    background-color: #65F0D5;
 }
 
 .neptune {
@@ -235,9 +241,10 @@ main::before {
         --bs-nav-pills-link-active-bg: var(--neptuneBlue);
     }
 
-    .circle-indicator {
-        background-color: #497EFA;
-    }
+}
+
+.circle-indicator.neptune {
+    background-color: #497EFA;
 }
 
 button.navbar-toggler {
@@ -287,9 +294,20 @@ li.nav-item {
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:active,
 .nav-pills .show>.nav-link {
-    border-color: var(--bs-nav-pills-link-active-bg) !important;
     background-color: transparent;
-    border-bottom: 4px solid;
+    border: none;
+}
+
+.nav-pills .nav-link.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: var(--bs-nav-pills-link-active-bg);
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .wiki-link,
@@ -311,6 +329,12 @@ li.nav-item {
         height: 380px;
         width: 380px;
         margin: auto;
+    }
+
+    .geology-img {
+        width: 163px;
+        height: 199px;
+        bottom: -50px;
     }
 
     h1,
