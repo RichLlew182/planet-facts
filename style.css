@@ -23,12 +23,27 @@
 
 }
 
+@font-face {
+    font-family: 'Spartan Regular';
+    src: url(./assets/fonts/spartan-mb.regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Spartan Bold';
+    src: url(./assets/fonts/spartan-mb.bold.otf);
+    font-weight: bold;
+    font-style: normal;
+}
+
 body {
-    font-family: "League Spartan", sans-serif;
+    font-family: 'Spartan Regular', sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
+    font-size: 14px;
     font-style: normal;
-    line-height: 1.25;
+    line-height: 25px;
     background: url(./assets/background-stars.svg) center center / cover no-repeat rgb(var(--darkSlate));
     color: white;
 }
@@ -49,7 +64,7 @@ h3,
 .h3,
 h4,
 .h4 {
-    font-family: "League Spartan", sans-serif;
+    font-family: "Spartan Bold", sans-serif;
     font-optical-sizing: auto;
     text-transform: uppercase;
     font-style: normal;
@@ -97,7 +112,7 @@ main::before {
     width: 100%;
     height: 1px;
     position: absolute;
-    top: 126px;
+    top: 116px;
     background: var(--bs-border-color);
     left: 0;
     right: 0;
@@ -263,6 +278,7 @@ li.nav-item {
 
 .nav-item a {
     font-size: 15px;
+    font-family: 'Spartan Bold', sans-serif;
     font-weight: 600;
     line-height: 25px;
     letter-spacing: 1.36px;
@@ -283,7 +299,7 @@ li.nav-item {
 
 .nav-pills {
     position: absolute;
-    top: 77px;
+    top: 67px;
 }
 
 .nav-pills .nav-link:hover {
@@ -368,7 +384,6 @@ li.nav-item {
 
     .nav-item a {
         font-size: 11px;
-        font-weight: 500;
         letter-spacing: 1px;
         border: none;
         padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
@@ -436,7 +451,7 @@ li.nav-item {
         width: 48px;
         height: 4px;
         background: var(--primaryBg);
-        top: -18px;
+        top: -16px;
         position: absolute;
         margin: auto;
         left: 0;
